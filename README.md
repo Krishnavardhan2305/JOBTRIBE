@@ -108,6 +108,7 @@ cd JOBTRIBE
 2. **Security**: Replace sensitive values like the `connectionURL`, `SECRET_KEY`, and Cloudinary credentials with your own before deployment.
 3. **Git Ignore**: Ensure the `.env` file is listed in `.gitignore` to avoid exposing sensitive information.
 ---
-![image](https://github.com/user-attachments/assets/494d7bb1-b46c-4d5f-9c9e-c5599f4c4314)
+![image](https://github.com/user-attachments/assets/5ab94e71-afe7-41d8-94ff-2f5be8dec010)
+
 
 
