@@ -16,7 +16,7 @@ import applicationRoute from "./routes/applicationroutes.js"
 
 
 // Load environment variables from .env file
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './.env' });
 
 const app = express();
 

@@ -7,23 +7,27 @@ import Footer from './Footer'
 import useGetAllJobs from '@/hooks/useGetAllJobs'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
 const Home = () => {
-  useGetAllJobs();
-  const navigate=useNavigate();
-  const {user}=useSelector(store=>store.auth);
-  useEffect(()=>{
-    if(user?.role==='Recruiter')
-    {
+  const navigate = useNavigate();
+  const { user } = useSelector(store => store.auth);
+
+  // Redirect recruiter properly
+  useEffect(() => {
+    if (user?.role === 'Recruiter') {
       navigate("/admin/companies");
     }
-  },[]);
+  }, [user, navigate]);
+
+  useGetAllJobs();
+
   return (
     <div>
-      <Navbar/>
-      <HeroSection/>
-      <CategoryCarousel/>
-      <LatestJobs/>
-      <Footer/>
+      <Navbar />
+      <HeroSection />
+      <CategoryCarousel />
+      <LatestJobs />
+      <Footer />
     </div>
   )
 }

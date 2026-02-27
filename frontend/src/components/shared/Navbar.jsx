@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className='flex items-center gap-2'>
             <ul className='flex font-medium items-center gap-5'>
               {
-                user && user.role === "student" ? (
+                user && user?.role === "student" ? (
                   <>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/jobs'>Jobs</Link></li>
